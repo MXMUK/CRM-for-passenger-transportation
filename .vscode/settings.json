@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "formulahendry.auto-rename-tag",
+  "eslint.format.enable": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
