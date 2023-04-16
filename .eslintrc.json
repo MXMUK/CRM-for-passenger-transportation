@@ -14,6 +14,8 @@
   "plugins": ["react"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/semi": ["error", 0]
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/consistent-type-imports": "off",
+    "multiline-ternary": "off" 
   }
 }

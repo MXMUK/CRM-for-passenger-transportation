@@ -1,31 +1,9 @@
-import type { FC } from 'react';
+import { FC } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { routing } from '../routes/routeConfig';
 
-const App: FC = () => {
+export const App: FC = () => {
   return (
-    <div className="App">
-      <div className="jumbotron text-center">
-        <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p>
-      </div>
-
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-          <div className="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-          <div className="col-sm-4">
-            <h3>Column 3</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RouterProvider router={routing} />
   );
 };
-
-export default App;

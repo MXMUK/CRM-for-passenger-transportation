@@ -1,4 +1,34 @@
-import { Route, Outlet, Navigate } from 'react-router-dom';
+// import { Route, Outlet, Navigate } from 'react-router-dom';
+
+import { createBrowserRouter } from 'react-router-dom';
+import { ADMIN } from './constants';
+import { Login } from '../features/auth/Login';
+import { Layout } from '../components/Layout';
+
+// export const DashBoardLayout: React.FC = () => {
+//   return (
+//     <Layout>
+//       {/* <Outlet /> */}
+//       <>sdgfjsfdgllfd</>
+//     </Layout>
+//   );
+// };
+
+export const routing = createBrowserRouter([
+  {
+    path: ADMIN.PATHS.ROOT,
+    element: <Layout></Layout>,
+    errorElement: <>err</>,
+    children: [
+      {
+        element: <Login />,
+        index: true
+      }
+    ]
+  }
+]);
+
+export {};
 
 // import Login from 'features/auth';
 // import Layout from 'components/Layout';
