@@ -16,6 +16,8 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/consistent-type-imports": "off",
-    "multiline-ternary": "off" 
+    "multiline-ternary": "off",
+    "semi": "off",
+    "@typescript-eslint/member-delimiter-style": "off"
   }
 }

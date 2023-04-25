@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap');
+
+$pathway-extreme: 'Pathway Extreme', serif;  
+
+body {
+	font-family: $pathway-extreme;
+	scroll-behavior: smooth;
+
+  background: #212529;
+}
