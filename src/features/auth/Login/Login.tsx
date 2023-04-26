@@ -1,6 +1,31 @@
-import type { FC } from 'react';
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/promise-function-async */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { FC, useState } from 'react';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 export const Login: FC = () => {
+  const [isAuthing, setIsAuthing] = useState(false);
+
+  const auth = getAuth();
+  const navigate = useNavigate();
+
+  const signWithGoogle = async () => {
+    setIsAuthing(true);
+
+    signInWithPopup(auth, new GoogleAuthProvider())
+      .then((res) => {
+        console.log(res.user.uid);
+        navigate('/');
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsAuthing(false);
+      });
+  };
+
   return (
     <div className="vh-100 d-flex justify-content-center align-items-center">
       <div className="container">
@@ -41,27 +66,27 @@ export const Login: FC = () => {
                     </div>
 
                     <p className="small">
-                      <a className="text-primary" href="forget-password.html">
+                      <a className="text-light" href="forget-password.html">
                         Forgot password?
                       </a>
                     </p>
                   </div>
 
                   <div className="text-center">
-                    <p>
+                    <p className="mb-0">
                       Not a member? <a href="#!">Register</a>
                     </p>
 
                     <p className="mb-0">or sign up with:</p>
 
-                    <div className="d-flex gap-2 justify-content-center mb-3">
-                      <a href="#!" className="text-white">
+                    <div className="d-flex gap-3 justify-content-center mb-3">
+                      <div className="text-white">
                         <i className="bi bi-facebook"></i>
-                      </a>
+                      </div>
 
-                      <a href="#!" className="text-white">
+                      <div className="text-white" onClick={() => signWithGoogle()}>
                         <i className="bi bi-google"></i>
-                      </a>
+                      </div>
                     </div>
                   </div>
 
@@ -76,7 +101,7 @@ export const Login: FC = () => {
                   <p className="mb-0  text-center">
                     {"Do'nt have an account? "}
 
-                    <a href="signup.html" className="text-primary fw-bold">
+                    <a href="signup.html" className="text-light fw-bold">
                       Sign Up
                     </a>
                   </p>

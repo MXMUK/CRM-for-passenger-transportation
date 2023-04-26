@@ -11,3 +11,23 @@ body {
 
   background: #212529;
 }
+
+.bi {
+  font-size: 30px
+}
+
+a {
+  color: #F8F9FA;
+
+  &:hover {
+    color: gray;
+  }
+
+  &:visited {
+    color: black;
+  }
+
+  &:active {
+    color: #212529;
+  }
+}

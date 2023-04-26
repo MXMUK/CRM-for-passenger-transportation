@@ -6,6 +6,12 @@ import { Login } from '../features/auth/Login';
 import { ErrorPage } from '../features/ErrorPage';
 import { Layout } from '../components/Layout';
 
+import { initializeApp } from 'firebase/app';
+import { config } from '../features/auth/config';
+import { AuthRoute } from '../features/auth/AuthRoute';
+
+initializeApp(config.firebaseConfig);
+
 export const routing = createBrowserRouter([
   {
     path: ADMIN.PATHS.ROOT,
@@ -13,7 +19,7 @@ export const routing = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        element: <h1>home</h1>,
+        element: <AuthRoute><h1>home</h1></AuthRoute>,
         index: true
       },
       {
