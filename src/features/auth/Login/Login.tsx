@@ -79,13 +79,13 @@ export const Login: FC = () => {
 
                     <p className="mb-0">or sign up with:</p>
 
-                    <div className="d-flex gap-3 justify-content-center mb-3">
+                    <div className="d-flex justify-content-center mb-3">
                       <div className="text-white">
-                        <i className="bi bi-facebook"></i>
+                        <i className="btn bi bi-facebook"></i>
                       </div>
 
                       <div className="text-white" onClick={() => signWithGoogle()}>
-                        <i className="bi bi-google"></i>
+                        <i className="btn bi bi-google"></i>
                       </div>
                     </div>
                   </div>

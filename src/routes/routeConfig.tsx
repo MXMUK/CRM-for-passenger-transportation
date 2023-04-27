@@ -9,6 +9,7 @@ import { Layout } from '../components/Layout';
 import { initializeApp } from 'firebase/app';
 import { config } from '../features/auth/config';
 import { AuthRoute } from '../features/auth/AuthRoute';
+import { Dashboard } from '../components/dashboard';
 
 initializeApp(config.firebaseConfig);
 
@@ -19,7 +20,7 @@ export const routing = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        element: <AuthRoute><h1>home</h1></AuthRoute>,
+        element: <AuthRoute><Dashboard /></AuthRoute>,
         index: true
       },
       {
