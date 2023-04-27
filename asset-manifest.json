@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/CRM-for-passenger-transportation/static/css/main.c2cab247.css",
-    "main.js": "/CRM-for-passenger-transportation/static/js/main.1347a48f.js",
+    "main.css": "/CRM-for-passenger-transportation/static/css/main.f737acf3.css",
+    "main.js": "/CRM-for-passenger-transportation/static/js/main.48f54b01.js",
+    "static/media/bootstrap-icons.woff?": "/CRM-for-passenger-transportation/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/CRM-for-passenger-transportation/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "index.html": "/CRM-for-passenger-transportation/index.html",
-    "main.c2cab247.css.map": "/CRM-for-passenger-transportation/static/css/main.c2cab247.css.map",
-    "main.1347a48f.js.map": "/CRM-for-passenger-transportation/static/js/main.1347a48f.js.map"
+    "main.f737acf3.css.map": "/CRM-for-passenger-transportation/static/css/main.f737acf3.css.map",
+    "main.48f54b01.js.map": "/CRM-for-passenger-transportation/static/js/main.48f54b01.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2cab247.css",
-    "static/js/main.1347a48f.js"
+    "static/css/main.f737acf3.css",
+    "static/js/main.48f54b01.js"
   ]
 }
